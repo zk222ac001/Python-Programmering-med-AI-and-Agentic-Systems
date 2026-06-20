@@ -6,31 +6,6 @@
 
 Your task begins with a [news article](https://edition.cnn.com/2020/07/15/world/pluto-new-horizons-anniversary-scn-trnd/index.html) detailing the incredible findings from the New Horizons mission. The spacecraft has sent back a treasure trove of information about the dwarf planet Pluto, revealing its secrets and captivating our imaginations. However, the article is quite long, and you need a more efficient way to understand its key themes.
 
-Time for your Python skills to blast off! 🚀
-
-## Before you begin 🚦
-
-If you **need a fresh copy of the assignment (reset)**, follow the provided [instructions](https://community.deeplearning.ai/t/downloading-your-notebook-downloading-your-workspace-and-refreshing-your-workspace/475495).
-
-<h2 style="color:green; font-weight:bold;">INSTRUCTIONS FOR ATTEMPTING THE ASSIGNMENT:</h2>
-
-- Before starting each exercise, read the instructions carefully. Look for the part called **Your Task**, it tells you exactly what you need to code and gives you all the details you need.
-
-
-- In each exercise cell, look for comments `### START CODE HERE ###` and `### END CODE HERE ###`. These show you where to write your code. **Do not add or change any code that is outside these comments, or add any extra code cells in the notebook.**
-
-
-- After you finish coding an exercise, there will be a test section that checks your work using a function called `test_your_code`. If everything is correct, you'll see a message saying "<span style="color: green;">All tests passed!</span>" and you can move on. <span style="color: red;">If there's a mistake, you'll see a red message explaining what went wrong, so you can fix it.</span>
-
-
-- **Before submitting your notebook for grading, ensure ALL exercises are complete (gotten All tests passed! for all of them)**. Save your work by clicking the 💾 icon at the top left, then click the <span style="color: blue; font-weight: bold;">Submit assignment</span> button at the top right.
-
-<h2 style="color:green; font-weight:bold;">ASKING FOR HELP IN THE COMMUNITY FORUM:</h2>
-
-- Sign up for our [Community Forum](https://community.deeplearning.ai/) if you haven't already. Once signed up, post your questions in the [AP4B category](https://community.deeplearning.ai/c/course-q-a/ai-python-for-beginners/463) with detailed information, such as the item's name, exercise number, or code cell. This helps others understand your issue better. Share screenshots if you can, but **don't post solution code publicly**; instead, share the error message you receive.
-
-With that out of the way, let's begin!
-
 ## Table of Exercises
 
 - [Exercise 1: Encountering Data - Reading the News Article 🛰️](#1)

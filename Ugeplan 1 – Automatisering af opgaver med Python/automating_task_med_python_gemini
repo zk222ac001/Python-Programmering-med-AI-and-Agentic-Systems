@@ -1,0 +1,163 @@
+from google import genai
+from dotenv import load_dotenv
+import os
+import sys
+
+# Load variables from .env
+load_dotenv()
+
+# Read API key
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    print("ERROR: GEMINI_API_KEY not found.")
+    print("Create a .env file and add:")
+    print("GEMINI_API_KEY=your_api_key_here")
+    sys.exit(1)
+
+# Initialize Gemini client
+client = genai.Client(api_key=api_key)
+
+
+def get_llm_response(prompt):
+    """Send prompt to Gemini and return response."""
+
+    try:
+        response = client.models.generate_content(
+            model="gemini-2.5-flash",
+            contents=prompt
+        )
+        return response.text
+
+    except Exception as e:
+        return f"Error: {e}"
+
+
+def print_llm_response(prompt):
+    """Print prompt and Gemini response."""
+
+    print("\nPROMPT:")
+    print(prompt)
+
+    print("\nRESPONSE:")
+    print(get_llm_response(prompt))
+
+    print("-" * 80)
+
+
+# ==========================================
+# Example 1: Task List
+# ==========================================
+
+list_of_tasks = [
+    "Compose a brief email to my boss explaining that I will be late for tomorrow's meeting.",
+    "Write a birthday poem for Otto, celebrating his 28th birthday.",
+    "Write a 300-word review of the movie 'Arrival'."
+]
+
+print("\n=== TASK EXAMPLES ===\n")
+
+for task in list_of_tasks:
+    print_llm_response(task)
+
+
+# ==========================================
+# Example 2: Ice Cream Descriptions
+# ==========================================
+
+ice_cream_flavors = [
+    "Vanilla",
+    "Chocolate",
+    "Strawberry",
+    "Mint Chocolate Chip"
+]
+
+print("\n=== ICE CREAM DESCRIPTIONS ===\n")
+
+for flavor in ice_cream_flavors:
+    prompt = f"""
+For the ice cream flavor listed below,
+provide a captivating description that could be used for promotional purposes.
+
+Flavor: {flavor}
+"""
+
+    print_llm_response(prompt)
+
+
+# ==========================================
+# Example 3: Save AI Results To A List
+# ==========================================
+
+promotional_descriptions = []
+
+for flavor in ice_cream_flavors:
+    prompt = f"""
+For the ice cream flavor listed below,
+provide a captivating description that could be used for promotional purposes.
+
+Flavor: {flavor}
+"""
+
+    description = get_llm_response(prompt)
+    promotional_descriptions.append(description)
+
+print("\n=== SAVED DESCRIPTIONS ===\n")
+
+for i, desc in enumerate(promotional_descriptions, start=1):
+    print(f"Description {i}:")
+    print(desc)
+    print()
+
+
+# ==========================================
+# Exercise 1
+# ==========================================
+
+print("\n=== EXERCISE 1 ===\n")
+
+ice_cream_flavors = ["Chocolate", "Mint Chocolate Chip"]
+
+for flavor in ice_cream_flavors:
+    print(flavor)
+
+
+# ==========================================
+# Exercise 2
+# ==========================================
+
+print("\n=== EXERCISE 2 ===\n")
+
+ice_cream_flavors = ["Vanilla", "Strawberry"]
+
+for flavor in ice_cream_flavors:
+    prompt = f"""
+Translate the following ice cream flavor to Spanish.
+Provide only the translation.
+
+Flavor: {flavor}
+"""
+
+    print_llm_response(prompt)
+
+
+# ==========================================
+# Exercise 3
+# ==========================================
+
+print("\n=== EXERCISE 3 ===\n")
+
+words_with_typos = ["Aple", "Wether", "Newpaper"]
+words_without_typos = []
+
+for word in words_with_typos:
+    prompt = f"""
+Fix the spelling mistake in the following word: {word}
+Provide only the corrected word.
+"""
+
+    corrected_word = get_llm_response(prompt).strip()
+    words_without_typos.append(corrected_word)
+
+print("Corrected words:")
+print(words_without_typos)

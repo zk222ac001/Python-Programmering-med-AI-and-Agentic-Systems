@@ -1,251 +1,276 @@
-# Python-programmering med AI og Agentiske Systemer
+# 🤖 Python-programmering med AI og Agentiske Systemer
 
-## Valgfag – 3. Semester
-**IT-Teknolog Programmet – Zealand**
+<div align="center">
 
----
-# Kursusbeskrivelse
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge\&logo=python)
+![AI](https://img.shields.io/badge/Artificial-Intelligence-FF6F00?style=for-the-badge)
+![LLM](https://img.shields.io/badge/LLMs-Generative_AI-purple?style=for-the-badge)
+![Agentic AI](https://img.shields.io/badge/Agentic-AI-green?style=for-the-badge)
 
-Dette kursus introducerer de studerende til moderne Python-programmering til udvikling af AI-løsninger med særligt fokus på **agentiske systemer (Agentic AI)**.
+### 🎓 Valgfag – 3. Semester
 
-De studerende lærer at udvikle intelligente softwareagenter, der kan:
+### IT-Teknolog Programmet | Zealand
 
-- Ræsonnere
-- Planlægge
-- Anvende værktøjer
-- Interagere med API'er
-- Behandle data
-- Samarbejde om at løse komplekse opgaver
-
-Kurset kombinerer:
-
-- Python-programmering
-- Kunstig intelligens (AI)
-- Store sprogmodeller (LLMs)
-- Agentbaserede arkitekturer
-
-gennem praktiske øvelser og projektarbejde.
+</div>
 
 ---
 
-# Læringsmål
+## 🌟 Kursusoversigt
 
-## Viden
+> Dette kursus introducerer de studerende til moderne Python-programmering for udvikling af AI-løsninger med fokus på **Agentic AI**, **Large Language Models (LLMs)** og **Multi-Agent Systemer**.
 
-Efter gennemført kursus kan den studerende:
+### 🚀 Du lærer at bygge AI-systemer som kan:
 
-- Forklare centrale principper inden for Python-programmering til AI-udvikling.
-- Redegøre for grundlæggende AI-begreber:
-  - Kunstig Intelligens (AI)
-  - Machine Learning (ML)
-  - Deep Learning (DL)
-  - Generativ AI
-  - Large Language Models (LLMs)
-- Beskrive arkitekturer og designprincipper for agentiske AI-systemer.
-- Forstå prompt engineering og værktøjsbaseret AI-interaktion.
+* 🧠 Ræsonnere
+* 📋 Planlægge
+* 🔧 Anvende værktøjer
+* 🌐 Kalde API'er
+* 📊 Analysere data
+* 🤝 Samarbejde med andre AI-agenter
 
 ---
 
-## Færdigheder
+# 🎯 Læringsmål
 
-Efter gennemført kursus kan den studerende:
+## 📚 Viden
 
-- Udvikle AI-applikationer i Python.
-- Integrere og anvende store sprogmodeller via API'er.
-- Designe og implementere AI-agenter med:
-  - Planlægning
-  - Hukommelse
-  - Værktøjsanvendelse
-- Udvikle Retrieval-Augmented Generation (RAG)-løsninger.
-- Konstruere og evaluere multi-agent-systemer.
+Efter kurset kan du:
 
----
+✅ Forklare Python til AI-udvikling
 
-## Kompetencer
+✅ Beskrive:
 
-Efter gennemført kursus kan den studerende:
+* Artificial Intelligence (AI)
+* Machine Learning (ML)
+* Deep Learning (DL)
+* Generativ AI
+* Large Language Models (LLMs)
 
-- Designe komplette AI-baserede løsninger til virkelige problemstillinger.
-- Vurdere etiske, juridiske og samfundsmæssige aspekter ved AI.
-- Samarbejde om udvikling af avancerede AI-projekter.
-- Implementere og deployere AI-løsninger i organisatoriske kontekster.
+✅ Forklare Agentic AI arkitekturer
+
+✅ Forstå Prompt Engineering
 
 ---
 
-# Kursusindhold
+## 🛠️ Færdigheder
 
-## Ugeplan 1 – Automatisering af opgaver med Python
+Du kan:
 
-### Introduktion til automatisering
-
-**Hvad kan automatiseres?**
-
-Eksempler fra erhvervslivet:
-
-- Rapportgenerering
-- Filorganisering
-- Databehandling
-- E-mailforberedelse
-
-### Praktisk arbejde
-
-- Anvendelse af prætrænede modeller
-- Modellers inferens i Python
+| Færdighed            | Niveau |
+| -------------------- | ------ |
+| Python AI Apps       | ⭐⭐⭐⭐⭐  |
+| LLM API Integration  | ⭐⭐⭐⭐⭐  |
+| AI Agents            | ⭐⭐⭐⭐⭐  |
+| RAG Systemer         | ⭐⭐⭐⭐   |
+| Multi-Agent Systemer | ⭐⭐⭐⭐   |
 
 ---
 
-## Ugeplan 2 – Introduktion til Kunstig Intelligens
+## 🏆 Kompetencer
 
-### AI-landskabet
-
-- Introduktion til Machine Learning
-- Neurale netværk
-- Generativ AI
-- Store sprogmodeller (LLMs)
-
-### Praktisk arbejde
-
-- Anvendelse af prætrænede modeller
-- Modellers inferens i Python
+* 🚀 Designe komplette AI-løsninger
+* ⚖️ Vurdere etiske og juridiske aspekter
+* 👥 Arbejde i AI-udviklingsteams
+* ☁️ Deploye AI-systemer
 
 ---
 
-## Ugeplan 3 – Store Sprogmodeller og Prompt Engineering
+# 📅 Kursusplan
 
-### Teori
+## 🐍 Uge 1 — Automatisering med Python
 
-- Hvordan LLM'er fungerer
-- Prompt-design
-- Strukturerede outputs
-- Function Calling
-- AI-assistenter
+### Emner
 
-### Praktisk arbejde
+* Rapportgenerering 📄
+* Filorganisering 📁
+* Databehandling 📊
+* E-mail automatisering 📧
 
-- Udvikling af intelligente chatassistenter
+### Hands-on
+
+```python
+import pandas as pd
+
+data = pd.read_excel("sales.xlsx")
+report = data.groupby("month").sum()
+report.to_excel("monthly_report.xlsx")
+```
 
 ---
 
-## Ugeplan 4 – Agentiske AI-systemer
+## 🤖 Uge 2 — Introduktion til Kunstig Intelligens
 
-### Teori
+### AI-Landskabet
 
-- Hvad er en AI-agent?
-- Planlægning og ræsonnering
-- Værktøjsintegration
-- Hukommelsesmekanismer
-- Autonome arbejdsprocesser
+```mermaid
+graph TD
+AI[Artificial Intelligence]
+AI --> ML[Machine Learning]
+ML --> DL[Deep Learning]
+DL --> GenAI[Generative AI]
+GenAI --> LLM[Large Language Models]
+```
+
+### Hands-on
+
+* Kør prætrænede modeller
+* Model inferens i Python
+
+---
+
+## 💬 Uge 3 — Store Sprogmodeller & Prompt Engineering
+
+### Emner
+
+* Prompt Design
+* Structured Output
+* Function Calling
+* AI Assistenter
+
+### Projekt
+
+🧑‍💻 Byg din egen ChatGPT-lignende assistent
+
+---
+
+## 🧠 Uge 4 — Agentiske AI-Systemer
 
 ### Frameworks
 
-- OpenAI SDK
-- LangChain
-- LangGraph
-- CrewAI
+| Framework  | Fokus             |
+| ---------- | ----------------- |
+| OpenAI SDK | LLM Integration   |
+| LangChain  | AI Workflows      |
+| LangGraph  | Agent Flows       |
+| CrewAI     | Multi-Agent Teams |
 
-### Praktisk arbejde
+### Projekt
 
-- Udvikling af autonome AI-agenter
+🤖 Byg en autonom AI Agent
 
 ---
 
-## Ugeplan 5 – Retrieval-Augmented Generation (RAG)
-
-### Teori
-
-- Embeddings
-- Vektordatabaser
-- Semantisk søgning
-- Vidensbaseret AI
+## 📚 Uge 5 — Retrieval-Augmented Generation (RAG)
 
 ### Teknologier
 
-- ChromaDB
-- FAISS
-- Pinecone
+* 🔎 Embeddings
+* 📦 Vector Databases
+* 🧠 Semantic Search
 
-### Praktisk arbejde
+### Platforme
 
-- Dokumentbaseret spørgsmål-svar-system
+| Teknologi | Type            |
+| --------- | --------------- |
+| ChromaDB  | Open Source     |
+| FAISS     | Local Vector DB |
+| Pinecone  | Cloud Vector DB |
 
----
+### Projekt
 
-## Ugeplan 6 – Multi-Agent-Systemer
-
-### Teori
-
-- Samarbejdende AI-agenter
-- Opgavedelegering
-- Workflow-orkestrering
-- Human-in-the-loop
-
-### Praktisk arbejde
-
-Udvikling af et AI-team bestående af:
-
-- Research Agent
-- Coding Agent
-- Review Agent
-- Projektleder Agent
+📖 Dokumentbaseret AI Assistent
 
 ---
 
-# Eksempler på Eksamensprojekter
+## 👥 Uge 6 — Multi-Agent Systemer
 
-Studerende kan vælge at udvikle eksempelvis:
+### AI Team
 
-- AI-forskningsassistent
-- Personlig vidensagent
-- Multi-agent softwareudviklingsteam
-- AI-baseret studievejleder
-- Kundeserviceagent
-- Dokumentanalyse- og videnssystem
-- Autonom dataanalytiker
-- AI-projektleder
+```mermaid
+graph LR
+
+PM[📋 Project Manager]
+
+RA[🔍 Research Agent]
+CA[💻 Coding Agent]
+RV[🧐 Review Agent]
+
+PM --> RA
+PM --> CA
+PM --> RV
+
+RA --> CA
+CA --> RV
+RV --> PM
+```
+
+### Projekt
+
+Udvikl et komplet AI-team bestående af:
+
+* 🔍 Research Agent
+* 💻 Coding Agent
+* 🧐 Review Agent
+* 📋 Projektleder Agent
 
 ---
 
-# Teknologier og Værktøjer
+# 🎓 Mulige Eksamensprojekter
 
-## Programmeringssprog
+| Projekt                          | Sværhedsgrad |
+| -------------------------------- | ------------ |
+| 🤖 AI Forskningsassistent        | ⭐⭐⭐          |
+| 📚 Personlig Vidensagent         | ⭐⭐⭐          |
+| 👨‍💻 Multi-Agent Udviklingsteam | ⭐⭐⭐⭐⭐        |
+| 🎓 AI Studievejleder             | ⭐⭐⭐          |
+| 📞 Kundeservice Agent            | ⭐⭐⭐          |
+| 📄 Dokumentanalyse System        | ⭐⭐⭐⭐         |
+| 📊 Autonom Dataanalytiker        | ⭐⭐⭐⭐         |
+| 📋 AI Projektleder               | ⭐⭐⭐⭐⭐        |
 
-- Python
+---
+
+# 🧰 Teknologistak
+
+## Programmering
+
+* 🐍 Python
 
 ## AI Frameworks
 
-- OpenAI SDK
-- LangChain
-- LangGraph
-- CrewAI
+* OpenAI SDK
+* LangChain
+* LangGraph
+* CrewAI
 
-## RAG og Vector Databases
+## RAG
 
-- ChromaDB
-- FAISS
-- Pinecone
+* ChromaDB
+* FAISS
+* Pinecone
 
 ## AI Modeller
 
-- GPT-modeller
-- Open source LLM'er
-- Embedding-modeller
+* GPT-modeller
+* Open Source LLMs
+* Embedding Modeller
 
 ---
 
-# Forudsætninger
+# 📋 Forudsætninger
 
-- Grundlæggende erfaring med Python-programmering anbefales.
-- Der kræves ikke tidligere erfaring med kunstig intelligens.
+> 💡 Grundlæggende Python-programmering anbefales.
+
+✅ Ingen tidligere erfaring med AI kræves.
 
 ---
 
-# Kursusresultat
+# 🚀 Efter Kurset
 
-Efter afslutning af kurset vil den studerende kunne udvikle moderne AI-systemer baseret på:
+Du vil kunne udvikle moderne AI-systemer baseret på:
 
-- Large Language Models (LLMs)
-- Agentic AI
-- Retrieval-Augmented Generation (RAG)
-- Multi-Agent Systemer
+* 🤖 Agentic AI
+* 🧠 Large Language Models
+* 📚 RAG
+* 👥 Multi-Agent Systemer
+* ☁️ Cloud-baserede AI-løsninger
 
-samt designe, implementere og deployere AI-løsninger til virkelige organisatoriske problemstillinger.
+---
+
+<div align="center">
+
+## 🌟 Fremtidens softwareudvikling er AI-drevet
+
+**Build • Reason • Automate • Collaborate**
+
+</div>

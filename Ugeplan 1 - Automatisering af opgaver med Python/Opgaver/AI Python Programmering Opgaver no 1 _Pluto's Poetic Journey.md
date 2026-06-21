@@ -1,3 +1,7 @@
+# **AI Python Programmering Opgaver no 2:** 
+
+# **Pluto's Poetic Journey 📚**
+
 # Programming Assignment: Pluto's Poetic Journey 🚀 
 
 🧑‍🚀 In this exciting adventure, you'll be diving into the fascinating world of space exploration and poetry (yes, you read that right, poetry! 🖋️). You'll be using Python to analyze a captivating news article about the New Horizons spacecraft's journey to Pluto and its discoveries. Get ready to flex your coding muscles and unleash your inner poet! 💫

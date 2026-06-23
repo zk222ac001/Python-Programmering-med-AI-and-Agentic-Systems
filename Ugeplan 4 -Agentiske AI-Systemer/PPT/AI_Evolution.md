@@ -1,3 +1,3 @@
 # AI Evolution
 
-Source presentation: [AI Evolution](https://zealanddk-my.sharepoint.com/...)
+Source presentation: [AI Evolution](https://zealanddk-my.sharepoint.com/:p:/r/personal/zukh_zealand_dk/_layouts/15/doc2.aspx?sourcedoc=%7B910EB484-364F-4F91-9835-18569CD22C1F%7D&file=Presentation%2012.pptx&action=editNew&mobileredirect=true&wdOrigin=OFFICECOM-WEB.APPBAR%2CAPPHOME-WEB.UNAUTH%2CAPPHOME-WEB.BANNER.NEWBLANK&wdPreviousSession=17b47ea4-5e13-4ca2-9068-3f9ab1b2071c&wdPreviousSessionSrc=AppHomeWeb&ct=1782153520740)

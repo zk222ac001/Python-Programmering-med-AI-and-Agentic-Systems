@@ -2,7 +2,7 @@
 
 ## 🎯 Objective
 
-In this exercise, you will build a **Linear Regression** model that predicts the selling price of a house based on its size (square feet).
+In this demo program, you will build a **Linear Regression** model that predicts the selling price of a house based on its size (square feet).
 
 This is one of the most common real-world applications of **Supervised Machine Learning**.
 

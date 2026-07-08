@@ -1,3 +1,6 @@
+
+![Linear Regression](../images/logistic_regression.png)
+
 # 📘 Logistic Regression – Complete Classroom Explanation
 
 Logistic Regression is one of the **most important Supervised Machine Learning algorithms**. Despite its name, it is **not used for regression**. Instead, it is used for **classification**, where the goal is to predict which category an observation belongs to.
@@ -35,38 +38,22 @@ After completing this lesson, students will be able to:
 
 # 🤔 Why Do We Need Logistic Regression?
 
-Imagine you own an online shopping website.
-
-Every day, thousands of customers visit your website.
-
-Some customers purchase products.
-
-Others leave without buying anything.
-
-Your goal is to answer the following question:
+Imagine you own an online shopping website. Every day, thousands of customers visit your website. Some customers purchase products.Others leave without buying anything.Your goal is to answer the following question:
 
 > **Will this customer purchase a product?**
-
 Possible answers are only:
-
 ```text
 YES
 ```
-
 or
 
 ```text
 NO
 ```
-
 Since there are only **two possible outcomes**, this problem is called a **Binary Classification Problem**.
-
 ---
-
 # 🧠 Logistic Regression is Supervised Learning
-
 Logistic Regression learns from **historical labeled data**.
-
 Example dataset:
 
 | Age | Salary ($1000) | Purchased |
@@ -79,17 +66,13 @@ Example dataset:
 |45|70|Yes|
 
 The algorithm learns the relationship between customer information and purchasing behavior.
-
 ---
-
 # 🤖 Machine Learning Workflow
-
 ```text
 Historical Customer Data
 
         │
         ▼
-
 +-----------------------+
 | Logistic Regression   |
 |       Model           |
@@ -97,50 +80,33 @@ Historical Customer Data
 
         │
         ▼
-
 Prediction
-
 YES
-
 or
-
 NO
 ```
-
 ---
 
 # 📊 Input and Output
 
 ## Input Features (X)
-
 These are the variables used to make predictions.
-
 Examples:
-
 - Age
 - Salary
 - Gender
 - Education
 - Membership Status
-
 ---
-
 ## Output Variable (Y)
-
 ```text
 Purchased
-
 YES
-
 or
-
 NO
 ```
-
 ---
-
 # 🛒 Real-Time Example
-
 Suppose a new customer has the following information:
 
 | Feature | Value |
@@ -149,37 +115,25 @@ Suppose a new customer has the following information:
 | Salary | $58,000 |
 
 Question:
-
 > **Will this customer buy the product?**
-
 ---
-
 # ❓ Why Can't We Use Linear Regression?
-
 Suppose a Linear Regression model predicts:
 
 ```text
 1.42
 ```
-
 or
 
 ```text
 -0.37
 ```
-
 These values do not represent meaningful categories.
-
 Instead, Logistic Regression predicts a **probability** between **0 and 1**.
-
 ---
-
 # 📈 Sigmoid Function
-
 The core of Logistic Regression is the **Sigmoid Function**.
-
 It converts any input value into a probability between **0** and **1**.
-
 ```text
 Probability
 
@@ -197,11 +151,9 @@ Probability
     +------------------------------------------>
              Linear Combination (z)
 ```
-
 ---
 
 # 🧮 Mathematical Formula
-
 The probability of belonging to Class **1** is calculated as:
 
 \[
@@ -219,17 +171,13 @@ Where:
 - **β₀** = Intercept
 - **β₁, β₂, ...** = Feature coefficients
 - **X₁, X₂, ...** = Input features
-
 ---
-
 # 📊 Understanding Probability
-
 Suppose the model predicts:
 
 ```text
 0.93
 ```
-
 This means:
 
 ```text
@@ -237,13 +185,11 @@ This means:
 
 Customer WILL purchase
 ```
-
 Another customer:
 
 ```text
 0.18
 ```
-
 means:
 
 ```text

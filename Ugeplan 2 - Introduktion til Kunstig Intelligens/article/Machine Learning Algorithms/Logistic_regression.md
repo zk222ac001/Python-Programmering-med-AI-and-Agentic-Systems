@@ -1,12 +1,10 @@
 
-![Linear Regression](../images/logistic_regression.png)
+![Logistic Regression](../images/logistic_regression.png)
 
 # 📘 Logistic Regression – Complete Classroom Explanation
 
 Logistic Regression is one of the **most important Supervised Machine Learning algorithms**. Despite its name, it is **not used for regression**. Instead, it is used for **classification**, where the goal is to predict which category an observation belongs to.
-
 ---
-
 # 🎯 Overview
 
 Logistic Regression predicts the **probability** that an input belongs to a particular class.
@@ -19,7 +17,6 @@ Unlike **Linear Regression**, which predicts a continuous numerical value (for e
 - Disease / Healthy
 - Fraud / Legitimate
 - Purchased / Not Purchased
-
 ---
 
 # 🎯 Learning Objectives

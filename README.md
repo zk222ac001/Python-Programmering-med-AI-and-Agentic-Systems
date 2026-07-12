@@ -274,3 +274,6 @@ Du vil kunne udvikle moderne AI-systemer baseret på:
 **Build • Reason • Automate • Collaborate**
 
 </div>
+
+<img width="398" height="468" alt="image" src="https://github.com/user-attachments/assets/d67361df-485d-428c-933a-020e60899ae7" />
+

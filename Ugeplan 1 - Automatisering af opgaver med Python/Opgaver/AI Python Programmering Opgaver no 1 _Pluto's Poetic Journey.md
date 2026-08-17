@@ -351,21 +351,6 @@ def save_to_file(contents_to_save):
 test_your_code.exercise_5(save_to_file) 
 ```
 
-### Submission Note:
-If you have passed all the tests up to this point, you can submit your assignment for grading.
-
-**But before you submit your assignment, re-run the assignment just in case there are any unexpected errors present in the notebook once it goes for grading.** To do so, follow these steps:
-
-1. Restart the `Kernel` and select the `Restart & Clear Output` option. You can do this by clicking on the `Kernel` menu at the top of the notebook.
-![Kernel Restart Image](kernel_restart.png)
-2. Once the kernel restarts and all outputs are clear, run the cells from top to bottom again up to this point.
-
-If you have followed these steps and still pass all of the tests, you can submit your assignment for grading. If you encounter any errors, please fix them before submitting.
-
-To submit your assignment for grading, save your work by clicking the 💾 icon at the top left, then click the <span style="color: blue; font-weight: bold;">Submit assignment</span> button at the top right. Good luck!
-
-Everything below this is OPTIONAL and will not affect your grading in anyway.
-
 Save your poem in the file!
 
 

@@ -1,4 +1,4 @@
-# **AI Python Programmering Opgaver no 2:** 
+# **AI Python Programmering Opgaver no 1:** 
 
 # **Pluto's Poetic Journey 📚**
 

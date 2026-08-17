@@ -36,6 +36,12 @@ class OpenAIClient(LLMClient):
             )
             return response.output_text
         except Exception as e:
+            error_code = getattr(e, "code", None)
+            if error_code in {"credit_balance_exhausted", "insufficient_quota"}:
+                return (
+                    "OpenAI Error: your account quota or credits are exhausted. "
+                    "Check your OpenAI billing/usage, then run the script again."
+                )
             return f"OpenAI Error: {e}"
 
 

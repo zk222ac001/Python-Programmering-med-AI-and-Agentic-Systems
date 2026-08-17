@@ -15,6 +15,16 @@ if not os.getenv("OPENAI_API_KEY"):
 client = OpenAI()
 
 
+def format_openai_error(error: OpenAIError) -> str:
+    error_code = getattr(error, "code", None)
+    if error_code in {"credit_balance_exhausted", "insufficient_quota"}:
+        return (
+            "OpenAI API Error: your account quota or credits are exhausted. "
+            "Check your OpenAI billing/usage, then run the script again."
+        )
+    return f"OpenAI API Error: {error}"
+
+
 def generate_response(messages: ResponseInputParam) -> str:
     """Send messages to OpenAI and return the response text."""
 
@@ -24,7 +34,7 @@ def generate_response(messages: ResponseInputParam) -> str:
         return response.output_text
 
     except OpenAIError as error:
-        return f"OpenAI API Error: {error}"
+        return format_openai_error(error)
 
 
 messages: ResponseInputParam = [

@@ -4,8 +4,9 @@ from openai import OpenAI, OpenAIError, RateLimitError
 # Loads OPENAI_API_KEY from the .env file.
 load_dotenv()
 
-MODEL_NAME = "gpt-5.6"
-
+# The name of the OpenAI model to use.
+# Keep this aligned with a model available on your OpenAI account.
+MODEL_NAME = "gpt-4o-mini"
 
 def main():
     try:
@@ -30,9 +31,10 @@ def main():
         print(response.output_text)
 
     except RateLimitError as error:
-        if getattr(error, "code", None) == "credit_balance_exhausted":
-            print("OpenAI API Error: your account has no credits remaining.")
-            print("Add credits in OpenAI billing, then run the script again.")
+        error_code = getattr(error, "code", None)
+        if error_code in {"credit_balance_exhausted", "insufficient_quota"}:
+            print("OpenAI API Error: your account quota or credits are exhausted.")
+            print("Check your OpenAI billing/usage, then run the script again.")
         else:
             print(f"OpenAI API Rate Limit Error: {error}")
 

@@ -16,6 +16,16 @@ import time
 MODEL_NAME = "gpt-4o-mini"
 
 
+def format_openai_error(error: OpenAIError) -> str:
+    error_code = getattr(error, "code", None)
+    if error_code in {"credit_balance_exhausted", "insufficient_quota"}:
+        return (
+            "OpenAI API Error: your account quota or credits are exhausted. "
+            "Check your OpenAI billing/usage, then run the script again."
+        )
+    return f"OpenAI API Error: {error}"
+
+
 # Create and return an OpenAI client.
 def create_client() -> OpenAI:
     # Load environment variables from .env file
@@ -41,7 +51,7 @@ def generate_response(client: OpenAI, prompt: str) -> str:
         return response.output_text
 
     except OpenAIError as error:
-        return f"OpenAI API Error: {error}"
+        return format_openai_error(error)
 
     except Exception as error:
         return f"Unexpected Error: {error}"
@@ -62,7 +72,7 @@ def main():
         return
 
     print("=" * 50)
-    print("🤖 OpenAI Chatbot Started")
+    print("[BOT] OpenAI Chatbot Started")
     print(f"Model: {MODEL_NAME}")
     print("Type 'exit' or 'quit' to stop")
     print("=" * 50)
@@ -79,11 +89,11 @@ def main():
 
             # Exit condition
             if prompt.lower() in ["exit", "quit"]:
-                print("\n👋 Goodbye!")
+                print("\nGoodbye!")
                 break
 
             # Show thinking message
-            print("\n⏳ Assistant is thinking...")
+            print("\nAssistant is thinking...")
 
             # Start timer
             start_time = time.time()
@@ -95,14 +105,14 @@ def main():
             processing_time = time.time() - start_time
 
             # Display response
-            print("\n🤖 Assistant:")
+            print("\nAssistant:")
             print(response)
 
             # Display processing time
-            print(f"\n⏱ Response generated in {processing_time:.2f} seconds")
+            print(f"\nResponse generated in {processing_time:.2f} seconds")
 
         except KeyboardInterrupt:
-            print("\n\n👋 Chat interrupted. Goodbye!")
+            print("\n\nChat interrupted. Goodbye!")
             break
 
         except Exception as error:

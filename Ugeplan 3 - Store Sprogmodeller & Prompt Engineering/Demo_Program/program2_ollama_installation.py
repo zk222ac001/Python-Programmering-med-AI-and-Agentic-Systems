@@ -1,5 +1,5 @@
 '''
-For completely free testing, use Ollama, 
+For completely free testing, use Ollama,
 which runs an AI model locally on your Windows computer—no API credits required.
 Install Ollama for Windows.
 Open PowerShell and download a small model:
@@ -44,7 +44,7 @@ except OpenAIError as error:
     print("ollama run gemma3:1b")
 
 '''
-Ollama officially provides an OpenAI-compatible API, 
+Ollama officially provides an OpenAI-compatible API,
 so your existing code may require only small changes.
 This is free, but:
 The model runs on your computer and may be slower.

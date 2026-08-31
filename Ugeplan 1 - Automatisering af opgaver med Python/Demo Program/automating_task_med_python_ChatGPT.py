@@ -1,6 +1,7 @@
 """Examples showing how Python can automate repeated LLM prompting tasks."""
 
 # Import the OpenAI client used to call the Responses API.
+# pip install openai
 from openai import OpenAI
 
 # Import os so the script can read environment variables.

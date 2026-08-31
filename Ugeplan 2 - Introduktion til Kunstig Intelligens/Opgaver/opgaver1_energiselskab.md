@@ -3,7 +3,7 @@
 > **Course:** Machine Learning with Python  
 > **Topic:** Supervised Learning – Linear Regression  
 > **Difficulty:** 🟢 Beginner to Intermediate  
-> **Estimated Duration:** ⏱️ 3–4 Hours  
+> **Estimated Duration:** ⏱️ 1–2 Hours  
 > **Country Context:** 🇩🇰 Denmark
 
 ---

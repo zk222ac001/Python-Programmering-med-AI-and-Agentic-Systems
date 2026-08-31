@@ -1,1 +1,1 @@
-![Linear Regression](../images/linear.png)
+![Linear Regression](../../images/linear.png)

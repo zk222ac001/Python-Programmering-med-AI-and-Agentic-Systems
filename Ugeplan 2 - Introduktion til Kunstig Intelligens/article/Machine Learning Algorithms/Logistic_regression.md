@@ -1,5 +1,5 @@
 
-![Logistic Regression](../images/logistic.png)
+![Logistic Regression](../../images/logistic.png)
 
 # 📘 Logistic Regression – Complete Classroom Explanation
 

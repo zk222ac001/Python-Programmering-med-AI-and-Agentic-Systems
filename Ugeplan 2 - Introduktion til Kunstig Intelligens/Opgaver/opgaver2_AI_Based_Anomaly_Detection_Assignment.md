@@ -5,7 +5,7 @@
 > **Algorithm:** Isolation Forest  
 > **Application Area:** Cybersecurity / Network Monitoring  
 > **Level:** Beginner to Intermediate  
-> **Estimated Time:** 3–4 Hours
+> **Estimated Time:** 1–2 Hours
 
 ---
 

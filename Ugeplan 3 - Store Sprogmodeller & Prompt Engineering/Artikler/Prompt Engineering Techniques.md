@@ -11,11 +11,11 @@
 
 ---
 
-![What is Prompt Engineering?](assets/what-is-prompt-engineering.png)
+![What is Prompt Engineering?](../../assets/what-is-prompt-engineering.png)
 
 ---
 
-![Prompt Engineering Techniques](assets/prompt-engineering-techniques.png)
+![Prompt Engineering Techniques](../../assets/prompt-engineering-techniques.png)
 
 ---
 

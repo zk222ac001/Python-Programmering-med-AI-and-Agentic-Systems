@@ -1,0 +1,75 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6D28D9"/>
+    <stop offset="50%" stop-color="#2563EB"/>
+    <stop offset="100%" stop-color="#06B6D4"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#F97316"/>
+    <stop offset="100%" stop-color="#F43F5E"/>
+  </linearGradient>
+  <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#14B8A6"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.18"/>
+  </filter>
+</defs>
+<rect width="100%" height="100%" fill="#F8FAFC"/>
+
+<text x="800" y="95" text-anchor="middle" font-family="Arial" font-size="60" font-weight="800" fill="#111827">
+  Zero-Shot, One-Shot and Few-Shot Prompting
+</text>
+<text x="800" y="145" text-anchor="middle" font-family="Arial" font-size="28" fill="#475569">
+  Add examples only when they help communicate the task or output pattern
+</text>
+
+<rect x="100" y="225" width="400" height="515" rx="34" fill="#F3E8FF" filter="url(#shadow)"/>
+<rect x="100" y="225" width="400" height="100" rx="34" fill="#7C3AED"/>
+<rect x="100" y="275" width="400" height="50" fill="#7C3AED"/>
+<text x="300" y="290" text-anchor="middle" font-family="Arial" font-size="36" font-weight="800" fill="#FFFFFF">ZERO-SHOT</text>
+<text x="300" y="385" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">Instruction</text>
+<text x="300" y="448" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">+</text>
+<text x="300" y="511" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">New Input</text>
+
+<path d="M300 610 L300 650" stroke="#7C3AED" stroke-width="8" stroke-linecap="round"/>
+<polygon points="285,646 315,646 300,672" fill="#7C3AED"/>
+<circle cx="300" cy="705" r="42" fill="#7C3AED"/>
+<text x="300" y="716" text-anchor="middle" font-family="Arial" font-size="25" font-weight="800" fill="#FFFFFF">LLM</text>
+<text x="300" y="810" text-anchor="middle" font-family="Arial" font-size="27" font-weight="700" fill="#7C3AED">Fastest starting point</text>
+
+<rect x="575" y="225" width="400" height="515" rx="34" fill="#DBEAFE" filter="url(#shadow)"/>
+<rect x="575" y="225" width="400" height="100" rx="34" fill="#2563EB"/>
+<rect x="575" y="275" width="400" height="50" fill="#2563EB"/>
+<text x="775" y="290" text-anchor="middle" font-family="Arial" font-size="36" font-weight="800" fill="#FFFFFF">ONE-SHOT</text>
+<text x="775" y="385" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">Instruction</text>
+<text x="775" y="448" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">+</text>
+<text x="775" y="511" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">1 Example</text>
+<text x="775" y="574" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">+</text>
+<text x="775" y="637" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">New Input</text>
+
+<path d="M775 610 L775 650" stroke="#2563EB" stroke-width="8" stroke-linecap="round"/>
+<polygon points="760,646 790,646 775,672" fill="#2563EB"/>
+<circle cx="775" cy="705" r="42" fill="#2563EB"/>
+<text x="775" y="716" text-anchor="middle" font-family="Arial" font-size="25" font-weight="800" fill="#FFFFFF">LLM</text>
+<text x="775" y="810" text-anchor="middle" font-family="Arial" font-size="27" font-weight="700" fill="#2563EB">Shows one pattern</text>
+
+<rect x="1050" y="225" width="400" height="515" rx="34" fill="#DCFCE7" filter="url(#shadow)"/>
+<rect x="1050" y="225" width="400" height="100" rx="34" fill="#059669"/>
+<rect x="1050" y="275" width="400" height="50" fill="#059669"/>
+<text x="1250" y="290" text-anchor="middle" font-family="Arial" font-size="36" font-weight="800" fill="#FFFFFF">FEW-SHOT</text>
+<text x="1250" y="385" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">Instruction</text>
+<text x="1250" y="448" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">+</text>
+<text x="1250" y="511" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">Several Examples</text>
+<text x="1250" y="574" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">+</text>
+<text x="1250" y="637" text-anchor="middle" font-family="Arial" font-size="31" font-weight="700" fill="#1E293B">New Input</text>
+
+<path d="M1250 610 L1250 650" stroke="#059669" stroke-width="8" stroke-linecap="round"/>
+<polygon points="1235,646 1265,646 1250,672" fill="#059669"/>
+<circle cx="1250" cy="705" r="42" fill="#059669"/>
+<text x="1250" y="716" text-anchor="middle" font-family="Arial" font-size="25" font-weight="800" fill="#FFFFFF">LLM</text>
+<text x="1250" y="810" text-anchor="middle" font-family="Arial" font-size="27" font-weight="700" fill="#059669">Useful for nuanced tasks</text>
+
+</svg>

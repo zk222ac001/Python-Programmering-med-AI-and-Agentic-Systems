@@ -1,0 +1,65 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900">
+<defs>
+  <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0%" stop-color="#6D28D9"/>
+    <stop offset="50%" stop-color="#2563EB"/>
+    <stop offset="100%" stop-color="#06B6D4"/>
+  </linearGradient>
+  <linearGradient id="g2" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#F97316"/>
+    <stop offset="100%" stop-color="#F43F5E"/>
+  </linearGradient>
+  <linearGradient id="g3" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0%" stop-color="#10B981"/>
+    <stop offset="100%" stop-color="#14B8A6"/>
+  </linearGradient>
+  <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+    <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#0F172A" flood-opacity="0.18"/>
+  </filter>
+</defs>
+<rect width="100%" height="100%" fill="#F8FAFC"/>
+
+<text x="800" y="92" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="60" font-weight="800" fill="#111827">
+  Anatomy of a Strong Prompt
+</text>
+<text x="800" y="145" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" fill="#475569">
+  Clear instructions reduce ambiguity and make outputs easier to evaluate
+</text>
+
+<rect x="115" y="225" width="665" height="145" rx="28" fill="#EDE9FE" filter="url(#shadow)"/>
+<circle cx="180" cy="297" r="34" fill="#6D28D9"/>
+<text x="180" y="309" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">1</text>
+<text x="240" y="283" font-family="Arial" font-size="31" font-weight="800" fill="#6D28D9">ROLE</text>
+<text x="240" y="327" font-family="Arial" font-size="26" fill="#334155">Who should the model act as?</text>
+
+<rect x="820" y="225" width="665" height="145" rx="28" fill="#DBEAFE" filter="url(#shadow)"/>
+<circle cx="885" cy="297" r="34" fill="#2563EB"/>
+<text x="885" y="309" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">2</text>
+<text x="945" y="283" font-family="Arial" font-size="31" font-weight="800" fill="#2563EB">TASK / GOAL</text>
+<text x="945" y="327" font-family="Arial" font-size="26" fill="#334155">What exactly should it do?</text>
+
+<rect x="115" y="410" width="665" height="145" rx="28" fill="#DCFCE7" filter="url(#shadow)"/>
+<circle cx="180" cy="482" r="34" fill="#059669"/>
+<text x="180" y="494" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">3</text>
+<text x="240" y="468" font-family="Arial" font-size="31" font-weight="800" fill="#059669">CONTEXT</text>
+<text x="240" y="512" font-family="Arial" font-size="26" fill="#334155">What background does it need?</text>
+
+<rect x="820" y="410" width="665" height="145" rx="28" fill="#FFEDD5" filter="url(#shadow)"/>
+<circle cx="885" cy="482" r="34" fill="#EA580C"/>
+<text x="885" y="494" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">4</text>
+<text x="945" y="468" font-family="Arial" font-size="31" font-weight="800" fill="#EA580C">CONSTRAINTS</text>
+<text x="945" y="512" font-family="Arial" font-size="26" fill="#334155">What rules and limits apply?</text>
+
+<rect x="115" y="595" width="665" height="145" rx="28" fill="#FFE4E6" filter="url(#shadow)"/>
+<circle cx="180" cy="667" r="34" fill="#E11D48"/>
+<text x="180" y="679" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">5</text>
+<text x="240" y="653" font-family="Arial" font-size="31" font-weight="800" fill="#E11D48">OUTPUT FORMAT</text>
+<text x="240" y="697" font-family="Arial" font-size="26" fill="#334155">What should the answer look like?</text>
+
+<rect x="820" y="595" width="665" height="145" rx="28" fill="#CCFBF1" filter="url(#shadow)"/>
+<circle cx="885" cy="667" r="34" fill="#0F766E"/>
+<text x="885" y="679" text-anchor="middle" font-family="Arial" font-size="30" font-weight="800" fill="#FFFFFF">6</text>
+<text x="945" y="653" font-family="Arial" font-size="31" font-weight="800" fill="#0F766E">EXAMPLES</text>
+<text x="945" y="697" font-family="Arial" font-size="26" fill="#334155">Would examples clarify the pattern?</text>
+
+</svg>

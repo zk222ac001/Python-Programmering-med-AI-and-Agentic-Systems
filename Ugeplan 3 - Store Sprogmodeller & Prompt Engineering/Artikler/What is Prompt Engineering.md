@@ -11,7 +11,7 @@
 
 ---
 
-![Prompt Engineering infographic](assets/prompt-engineering-infographic.png)
+![Prompt Engineering infographic](../../assets/prompt-engineering-infographic.png)
 ---
 
 ## 📚 Table of Contents

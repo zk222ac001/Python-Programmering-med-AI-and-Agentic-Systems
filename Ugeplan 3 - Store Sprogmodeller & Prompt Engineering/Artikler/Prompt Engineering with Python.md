@@ -2,7 +2,7 @@
 
 ## 🚀 From Simple Questions to Reliable AI Instructions
 
-![Week 2 Prompt Engineering Hero](assets/week2_hero_banner.svg)
+![Week 2 Prompt Engineering Hero](../../assets/week2_hero_banner.svg)
 
 > 🎯 **Big idea:** A prompt is not simply a question. In an LLM application, a prompt is part of the software design.
 
@@ -142,7 +142,7 @@ More controlled output
 
 # 🔁 3. Prompt Engineering Is an Iterative Process
 
-![Prompt Evaluation Loop](assets/prompt_evaluation_loop.svg)
+![Prompt Evaluation Loop](../../assets/prompt_evaluation_loop.svg)
 
 Prompt engineering works like software development:
 
@@ -175,7 +175,7 @@ flowchart TD
 
 # 🧩 4. Anatomy of a Strong Prompt
 
-![Anatomy of a Strong Prompt](assets/prompt_anatomy.svg)
+![Anatomy of a Strong Prompt](../../assets/prompt_anatomy.svg)
 
 A useful framework is:
 
@@ -417,7 +417,7 @@ flowchart LR
 
 # 🎲 10. Zero-Shot, One-Shot and Few-Shot Prompting
 
-![Prompting Techniques](assets/prompting_techniques.svg)
+![Prompting Techniques](../../assets/prompting_techniques.svg)
 
 ## 🟣 Zero-Shot Prompting
 
@@ -538,7 +538,7 @@ Technical
 
 # 🐍 11. Prompt Templates in Python
 
-![Python Prompt Engineering Pipeline](assets/python_llm_pipeline.svg)
+![Python Prompt Engineering Pipeline](../../assets/python_llm_pipeline.svg)
 
 Python allows us to transform static prompts into reusable templates.
 
@@ -1363,4 +1363,4 @@ flowchart TD
 
 If you want a one-page visual summary, open:
 
-![Week 2 Full Prompt Engineering Infographic](assets/week2_prompt_engineering_infographic.png)
+![Week 2 Full Prompt Engineering Infographic](../../assets/week2_prompt_engineering_infographic.png)

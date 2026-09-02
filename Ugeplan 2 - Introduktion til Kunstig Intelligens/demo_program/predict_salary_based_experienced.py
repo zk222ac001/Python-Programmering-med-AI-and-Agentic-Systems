@@ -32,11 +32,7 @@ from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 
 # Metrics are used to evaluate model performance
-from sklearn.metrics import (
-    mean_absolute_error,
-    mean_squared_error,
-    r2_score
-)
+from sklearn.metrics import mean_absolute_error, mean_squared_error, r2_score
 
 
 # ------------------------------------------------------------
@@ -45,19 +41,7 @@ from sklearn.metrics import (
 
 data = {
     "YearsExperience": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
-
-    "Salary": [
-        35000,
-        40000,
-        45000,
-        50000,
-        55000,
-        60000,
-        65000,
-        70000,
-        75000,
-        80000
-    ]
+    "Salary": [35000, 40000, 45000, 50000, 55000, 60000, 65000, 70000, 75000, 80000],
 }
 
 
@@ -126,10 +110,7 @@ print(y)
 # 20% of data will be used for testing
 
 X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.20,
-    random_state=42
+    X, y, test_size=0.20, random_state=42
 )
 
 
@@ -171,7 +152,7 @@ print("Model trained successfully!")
 # Intercept
 intercept = model.intercept_
 
-/# Slope / coefficient
+# Slope / coefficient
 slope = model.coef_[0]
 
 
@@ -184,10 +165,7 @@ print(f"Slope: {slope:.2f}")
 # Display mathematical equation
 print("\nRegression Equation:")
 
-print(
-    f"Salary = {slope:.2f} × YearsExperience "
-    f"+ {intercept:.2f}"
-)
+print(f"Salary = {slope:.2f} × YearsExperience + {intercept:.2f}")
 
 
 # ------------------------------------------------------------
@@ -207,11 +185,13 @@ print(y_pred)
 # STEP 11: Compare Actual vs Predicted
 # ------------------------------------------------------------
 
-results = pd.DataFrame({
-    "YearsExperience": X_test["YearsExperience"],
-    "Actual Salary": y_test,
-    "Predicted Salary": y_pred
-})
+results = pd.DataFrame(
+    {
+        "YearsExperience": X_test["YearsExperience"],
+        "Actual Salary": y_test,
+        "Predicted Salary": y_pred,
+    }
+)
 
 
 # Sort results by years of experience
@@ -252,13 +232,11 @@ print(f"R²   : {r2:.4f}")
 # STEP 13: Predict salary for a new employee
 # ------------------------------------------------------------
 
-new_experience = 12
+new_experience = 50
 
 
 # Create DataFrame using the same feature name
-new_employee = pd.DataFrame({
-    "YearsExperience": [new_experience]
-})
+new_employee = pd.DataFrame({"YearsExperience": [new_experience]})
 
 
 predicted_salary = model.predict(new_employee)
@@ -274,22 +252,14 @@ print(f"Predicted Salary    : {predicted_salary[0]:,.2f}")
 # STEP 14: Visualize the original data
 # ------------------------------------------------------------
 
-plt.scatter(
-    X["YearsExperience"],
-    y,
-    label="Actual Salary Data"
-)
+plt.scatter(X["YearsExperience"], y, label="Actual Salary Data")
 
 
 # ------------------------------------------------------------
 # STEP 15: Draw regression line
 # ------------------------------------------------------------
 
-plt.plot(
-    X["YearsExperience"],
-    model.predict(X),
-    label="Regression Line"
-)
+plt.plot(X["YearsExperience"], model.predict(X), label="Regression Line")
 
 
 # ------------------------------------------------------------

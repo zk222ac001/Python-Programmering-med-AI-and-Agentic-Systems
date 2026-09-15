@@ -1,977 +1,896 @@
-# 🤖 Introduction to Prompt Engineering
+# 🤖 Introduktion til prompt engineering
 
-### A Beginner-Friendly Guide for IT Students
+### En begyndervenlig guide til IT-studerende
 
-![Level](https://img.shields.io/badge/Level-Beginner-22c55e?style=for-the-badge)
-![Topic](https://img.shields.io/badge/Topic-Prompt%20Engineering-7c3aed?style=for-the-badge)
-![Examples](https://img.shields.io/badge/Examples-Python-3776AB?style=for-the-badge)
+![Niveau](https://img.shields.io/badge/Niveau-Begynder-22c55e?style=for-the-badge)
+![Emne](https://img.shields.io/badge/Emne-Prompt%20Engineering-7c3aed?style=for-the-badge)
+![Eksempler](https://img.shields.io/badge/Eksempler-Python-3776AB?style=for-the-badge)
 ![Format](https://img.shields.io/badge/Format-GitHub%20Markdown-111827?style=for-the-badge)
 
-**Learn how to turn vague questions into clear, structured prompts that produce more useful AI responses.**
+**Lær at omdanne uklare spørgsmål til tydelige og strukturerede prompts, der giver mere brugbare AI-svar.**
 
 ---
 
-![Prompt Engineering infographic](../../assets/prompt-engineering-infographic.png)
----
-
-## 📚 Table of Contents
-
-1. [What Is Prompt Engineering?](#-1-what-is-prompt-engineering)
-2. [What Is a Prompt?](#-2-what-is-a-prompt)
-3. [Prompt 1: A Weak Prompt](#-3-prompt-1-a-weak-prompt)
-4. [Prompt 2: A Structured Prompt](#-4-prompt-2-a-structured-prompt)
-5. [Which Prompt Is Better?](#-5-which-prompt-is-better)
-6. [Anatomy of a Good Prompt](#-6-anatomy-of-a-good-prompt)
-7. [Role](#-7-role)
-8. [Task](#-8-task)
-9. [Context and Audience](#-9-context-and-audience)
-10. [Requirements](#-10-requirements)
-11. [Constraints](#-11-constraints)
-12. [How a Prompt Works](#-12-how-a-prompt-works)
-13. [Prompt Engineering Formula](#-13-prompt-engineering-formula)
-14. [Example: Python Loops](#-14-example-python-loops)
-15. [Example: Artificial Intelligence](#-15-example-artificial-intelligence)
-16. [Example: Cybersecurity](#-16-example-cybersecurity)
-17. [Longer Is Not Always Better](#-17-longer-is-not-always-better)
-18. [Prompt Engineering for Teachers](#-18-prompt-engineering-for-teachers)
-19. [Iterative Prompt Improvement](#-19-iterative-prompt-improvement)
-20. [Reusable Prompt Template](#-20-reusable-prompt-template)
-21. [Student Activities](#-21-student-activities)
-22. [Summary](#-22-summary)
-23. [Key Takeaway](#-23-key-takeaway)
+![Infografik om prompt engineering](../../assets/prompt-engineering-infographic.png)
 
 ---
 
-## 🎯 Learning Objectives
+## 📚 Indholdsfortegnelse
 
-After completing this article, students should be able to:
+1. [Hvad er prompt engineering?](#-1-hvad-er-prompt-engineering)
+2. [Hvad er en prompt?](#-2-hvad-er-en-prompt)
+3. [Prompt 1: En svag prompt](#-3-prompt-1-en-svag-prompt)
+4. [Prompt 2: En struktureret prompt](#-4-prompt-2-en-struktureret-prompt)
+5. [Hvilken prompt er bedst?](#-5-hvilken-prompt-er-bedst)
+6. [Opbygningen af en god prompt](#-6-opbygningen-af-en-god-prompt)
+7. [Rolle](#-7-rolle)
+8. [Opgave](#-8-opgave)
+9. [Kontekst og målgruppe](#-9-kontekst-og-målgruppe)
+10. [Krav](#-10-krav)
+11. [Begrænsninger](#-11-begrænsninger)
+12. [Hvordan virker en prompt?](#-12-hvordan-virker-en-prompt)
+13. [Formel til prompt engineering](#-13-formel-til-prompt-engineering)
+14. [Eksempel: Python-løkker](#-14-eksempel-python-løkker)
+15. [Eksempel: Kunstig intelligens](#-15-eksempel-kunstig-intelligens)
+16. [Eksempel: Cybersikkerhed](#-16-eksempel-cybersikkerhed)
+17. [Længere er ikke altid bedre](#-17-længere-er-ikke-altid-bedre)
+18. [Prompt engineering for undervisere](#-18-prompt-engineering-for-undervisere)
+19. [Iterativ forbedring af prompts](#-19-iterativ-forbedring-af-prompts)
+20. [Genanvendelig promptskabelon](#-20-genanvendelig-promptskabelon)
+21. [Studenteraktiviteter](#-21-studenteraktiviteter)
+22. [Opsummering](#-22-opsummering)
+23. [Vigtigste pointe](#-23-vigtigste-pointe)
 
-| Objective | What the student should understand |
+---
+
+## 🎯 Læringsmål
+
+Efter at have gennemgået artiklen skal de studerende kunne:
+
+| Mål | Det skal den studerende forstå |
 |---|---|
-| 🧠 Define | Explain what a prompt and Prompt Engineering are |
-| 🔍 Compare | Recognize the difference between weak and structured prompts |
-| 🧩 Structure | Identify role, task, context, requirements, and constraints |
-| ✍️ Create | Write a structured prompt for an IT-related task |
-| 🔁 Improve | Evaluate an AI response and refine the original prompt |
+| 🧠 Definere | Forklare, hvad en prompt og prompt engineering er |
+| 🔍 Sammenligne | Genkende forskellen på svage og strukturerede prompts |
+| 🧩 Strukturere | Identificere rolle, opgave, kontekst, krav og begrænsninger |
+| ✍️ Udarbejde | Skrive en struktureret prompt til en IT-relateret opgave |
+| 🔁 Forbedre | Evaluere et AI-svar og forbedre den oprindelige prompt |
 
 > [!TIP]
-> **Main idea:** AI works better when we communicate our expectations clearly.
+> **Hovedidé:** AI fungerer bedre, når vi kommunikerer vores forventninger tydeligt.
 
 ---
 
-# 🧠 1. What Is Prompt Engineering?
+# 🧠 1. Hvad er prompt engineering?
 
-**Prompt Engineering** is the process of designing clear, structured, and useful instructions for an AI model.
+**Prompt engineering** er processen med at udforme tydelige, strukturerede og brugbare instruktioner til en AI-model.
 
-When we communicate with an AI system such as ChatGPT, we give it a **prompt**.
+Når vi kommunikerer med et AI-system som ChatGPT, giver vi det en **prompt**.
 
-The quality of the response often depends on how clearly the prompt explains:
+Kvaliteten af svaret afhænger ofte af, hvor tydeligt prompten forklarer:
 
-- what we want,
-- who the answer is for,
-- how the answer should be written,
-- what information should be included,
-- and what should be avoided.
+- hvad vi ønsker,
+- hvem svaret er til,
+- hvordan svaret skal skrives,
+- hvilke oplysninger der skal medtages,
+- og hvad der skal undgås.
 
-A short prompt can work, but a structured prompt gives us greater control over the result.
+En kort prompt kan fungere, men en struktureret prompt giver os større kontrol over resultatet.
 
 > [!NOTE]
-> Prompt Engineering is not about making prompts unnecessarily long.  
-> It is about making instructions **clear, specific, relevant, and structured**.
+> Prompt engineering handler ikke om at gøre prompts unødvendigt lange.  
+> Det handler om at gøre instruktionerne **tydelige, specifikke, relevante og strukturerede**.
 
 ---
 
-# 💬 2. What Is a Prompt?
+# 💬 2. Hvad er en prompt?
 
-A **prompt** is an instruction, question, command, or piece of information given to an AI model.
+En **prompt** er en instruktion, et spørgsmål, en kommando eller information, som gives til en AI-model.
 
-For example:
+Eksempel:
 
 ```text
-Explain Python.
+Forklar Python.
 ```
 
-This is a valid prompt.
+Dette er en gyldig prompt, men den er meget generel.
 
-However, it is very general.
+AI-modellen ved ikke:
 
-The AI does not know:
+- Hvem skal lære Python?
+- Er personen begynder eller erfaren programmør?
+- Hvilket Python-emne skal forklares?
+- Hvor detaljeret skal forklaringen være?
+- Skal der medtages kodeeksempler?
+- Skal der medtages øvelser?
+- Hvilket svarformat skal anvendes?
 
-- Who is learning Python?
-- Is the learner a beginner or advanced programmer?
-- Which Python topic should be explained?
-- How detailed should the explanation be?
-- Should code examples be included?
-- Should exercises be included?
-- What response format should be used?
-
-Because the prompt gives very little information, the AI must make many assumptions.
+Da prompten indeholder meget lidt information, må AI-modellen selv foretage mange antagelser.
 
 ---
 
-# ❌ 3. Prompt 1: A Weak Prompt
+# ❌ 3. Prompt 1: En svag prompt
 
-Consider the following prompt:
+Overvej denne prompt:
 
 ```text
-Explain Python.
+Forklar Python.
 ```
 
-This prompt is understandable, but it is very broad.
+Prompten er forståelig, men meget bred. AI-modellen kan vælge at forklare:
 
-The AI may decide to explain:
-
-- Python history
-- Variables
-- Data types
-- Conditions
-- Loops
-- Functions
-- Object-oriented programming
-- Artificial intelligence
+- Pythons historie
+- Variabler
+- Datatyper
+- Betingelser
+- Løkker
+- Funktioner
+- Objektorienteret programmering
+- Kunstig intelligens
 - Data science
-- Web development
+- Webudvikling
 
-The user has not clearly defined the learning goal.
+Brugeren har ikke tydeligt defineret læringsmålet.
 
-### Why is it weak?
+### Hvorfor er den svag?
 
-| Problem | Explanation |
+| Problem | Forklaring |
 |---|---|
-| ❌ Too general | The topic is very broad |
-| ❌ No role | The AI does not know what perspective to take |
-| ❌ No audience | The learner's level is unknown |
-| ❌ No format | The response structure is not defined |
-| ❌ No boundaries | The AI decides what to include |
+| ❌ For generel | Emnet er meget bredt |
+| ❌ Ingen rolle | AI-modellen kender ikke det ønskede perspektiv |
+| ❌ Ingen målgruppe | Den lærendes niveau er ukendt |
+| ❌ Intet format | Svarets struktur er ikke defineret |
+| ❌ Ingen grænser | AI-modellen bestemmer selv indholdet |
 
 ---
 
-# ✅ 4. Prompt 2: A Structured Prompt
+# ✅ 4. Prompt 2: En struktureret prompt
 
-Now compare it with the following prompt:
+Sammenlign nu med følgende prompt:
 
 ```text
-You are an experienced Python teacher.
+Du er en erfaren Python-underviser.
 
-Explain Python variables to a first-semester
-IT student who has never programmed before.
+Forklar Python-variabler til en IT-studerende på
+første semester, som aldrig har programmeret før.
 
-Requirements:
+Krav:
 
-- Use simple language.
-- Start with a definition.
-- Give one real-world analogy.
-- Provide one executable Python example.
-- Explain the code.
-- Give two exercises.
-- Do not provide solutions.
+- Brug et enkelt sprog.
+- Begynd med en definition.
+- Giv én analogi fra virkeligheden.
+- Vis ét Python-eksempel, der kan køres.
+- Forklar koden.
+- Giv to øvelser.
+- Giv ikke løsningerne.
 ```
 
-This prompt tells the AI much more.
+Denne prompt giver AI-modellen langt flere oplysninger. Den definerer:
 
-It defines:
+- 🎭 en **rolle**
+- 🎯 en **opgave**
+- 👥 en **målgruppe**
+- 📚 den lærendes **kontekst**
+- 📋 tydelige **krav**
+- 🚧 en **begrænsning**
 
-- 🎭 a **role**
-- 🎯 a **task**
-- 👥 an **audience**
-- 📚 the learner's **context**
-- 📋 clear **requirements**
-- 🚧 a **constraint**
-
-This reduces uncertainty and gives the AI clearer direction.
+Det reducerer usikkerheden og giver AI-modellen en tydeligere retning.
 
 ---
 
-# 🏆 5. Which Prompt Is Better?
+# 🏆 5. Hvilken prompt er bedst?
 
-For this teaching situation, **Prompt 2 is better**.
+I denne undervisningssituation er **prompt 2 bedst**.
 
-Prompt 1 is not incorrect. It is simply too broad for a controlled classroom learning activity.
+Prompt 1 er ikke forkert. Den er blot for bred til en kontrolleret læringsaktivitet.
 
 | Prompt 1 | Prompt 2 |
 |---|---|
-| ❌ Very general | ✅ Specific and clear |
-| ❌ No role | ✅ Defines the AI role |
-| ❌ No audience | ✅ Defines the target audience |
-| ❌ No learner level | ✅ Specifies a beginner |
-| ❌ Broad topic | ✅ Focuses on Python variables |
-| ❌ No response structure | ✅ Gives clear requirements |
-| ❌ No exercise requirement | ✅ Requests two exercises |
-| ❌ AI decides most details | ✅ Teacher controls important details |
+| ❌ Meget generel | ✅ Specifik og tydelig |
+| ❌ Ingen rolle | ✅ Definerer AI-modellens rolle |
+| ❌ Ingen målgruppe | ✅ Definerer målgruppen |
+| ❌ Intet niveau | ✅ Angiver begynderniveau |
+| ❌ Bredt emne | ✅ Fokuserer på Python-variabler |
+| ❌ Ingen svarstruktur | ✅ Angiver tydelige krav |
+| ❌ Intet krav om øvelser | ✅ Beder om to øvelser |
+| ❌ AI vælger de fleste detaljer | ✅ Underviseren styrer de vigtige detaljer |
 
 > [!IMPORTANT]
-> **Better instructions usually lead to more relevant and more predictable AI responses.**
+> **Bedre instruktioner fører som regel til mere relevante og forudsigelige AI-svar.**
 
 ---
 
-# 🧩 6. Anatomy of a Good Prompt
+# 🧩 6. Opbygningen af en god prompt
 
-A useful beginner model is:
+En brugbar begyndermodel er:
 
 ```mermaid
 flowchart LR
-    A["🎭 ROLEWho should the AI be?"]
-    B["🎯 TASKWhat should it do?"]
-    C["👥 CONTEXT / AUDIENCEWho is it for?"]
-    D["📋 REQUIREMENTSWhat must be included?"]
-    E["🚧 CONSTRAINTSWhat should be avoided?"]
-    F["✨ BETTER RESPONSE"]
+    A["🎭 ROLLE<br/>Hvem skal AI være?"]
+    B["🎯 OPGAVE<br/>Hvad skal den gøre?"]
+    C["👥 KONTEKST / MÅLGRUPPE<br/>Hvem er svaret til?"]
+    D["📋 KRAV<br/>Hvad skal medtages?"]
+    E["🚧 BEGRÆNSNINGER<br/>Hvad skal undgås?"]
+    F["✨ BEDRE SVAR"]
 
     A --> B --> C --> D --> E --> F
-
-    style A fill:#3b82f6,color:#ffffff,stroke:#1d4ed8,stroke-width:2px
-    style B fill:#22c55e,color:#ffffff,stroke:#15803d,stroke-width:2px
-    style C fill:#f59e0b,color:#111827,stroke:#d97706,stroke-width:2px
-    style D fill:#8b5cf6,color:#ffffff,stroke:#6d28d9,stroke-width:2px
-    style E fill:#f97316,color:#ffffff,stroke:#c2410c,stroke-width:2px
-    style F fill:#ec4899,color:#ffffff,stroke:#be185d,stroke-width:2px
 ```
 
-A structured prompt does not need every possible element every time, but these five elements provide an excellent foundation.
+En struktureret prompt behøver ikke altid at indeholde alle tænkelige elementer, men disse fem elementer er et fremragende udgangspunkt.
 
 ---
 
-# 🎭 7. Role
+# 🎭 7. Rolle
 
-The **role** tells the AI what perspective it should take.
-
-Example:
+**Rollen** fortæller AI-modellen, hvilket perspektiv den skal anvende.
 
 ```text
-You are an experienced Python teacher.
+Du er en erfaren Python-underviser.
 ```
 
-Other examples include:
+Andre eksempler:
 
 ```text
-You are a cybersecurity instructor.
-```
-
-```text
-You are a Python programming tutor.
+Du er underviser i cybersikkerhed.
 ```
 
 ```text
-You are an experienced software developer.
+Du er vejleder i Python-programmering.
 ```
 
 ```text
-You are a technical support specialist.
+Du er en erfaren softwareudvikler.
 ```
-
-The role helps guide the style, terminology, and point of view of the answer.
-
-### Example
-
-Without a role:
 
 ```text
-Explain Python variables.
+Du er specialist i teknisk support.
 ```
 
-With a role:
+Rollen hjælper med at styre svarets stil, terminologi og synsvinkel.
+
+Uden rolle:
 
 ```text
-You are an experienced Python teacher.
-
-Explain Python variables.
+Forklar Python-variabler.
 ```
 
-The second prompt gives the AI additional context about how it should approach the task.
+Med rolle:
+
+```text
+Du er en erfaren Python-underviser.
+Forklar Python-variabler.
+```
+
+Den anden prompt giver AI-modellen ekstra kontekst om, hvordan opgaven skal løses.
 
 ---
 
-# 🎯 8. Task
+# 🎯 8. Opgave
 
-The **task** tells the AI exactly what it should do.
-
-Example:
+**Opgaven** fortæller præcist, hvad AI-modellen skal gøre.
 
 ```text
-Explain Python variables.
+Forklar Python-variabler.
 ```
 
-A clear task is better than a vague request.
+En tydelig opgave er bedre end en uklar forespørgsel.
 
-### Broad task
+### Bred opgave
 
 ```text
-Tell me about Python.
+Fortæl mig om Python.
 ```
 
-### More specific task
+### Mere specifik opgave
 
 ```text
-Explain Python lists and how they are used.
+Forklar Python-lister, og hvordan de anvendes.
 ```
 
-The second version provides a much clearer goal.
+Den anden version har et langt tydeligere mål.
 
 > [!TIP]
-> Try to use action words such as:
+> Brug gerne handlingsord som:
 >
-> **Explain, compare, summarize, create, classify, analyze, rewrite, generate, evaluate, or demonstrate.**
+> **Forklar, sammenlign, opsummér, opret, klassificér, analysér, omskriv, generér, evaluér eller demonstrér.**
 
 ---
 
-# 👥 9. Context and Audience
+# 👥 9. Kontekst og målgruppe
 
-The **context** explains the situation.
-
-The **audience** tells the AI who the answer is for.
-
-Example:
+**Konteksten** forklarer situationen. **Målgruppen** fortæller, hvem svaret er beregnet til.
 
 ```text
-Explain Python variables to a first-semester
-IT student who has never programmed before.
+Forklar Python-variabler til en IT-studerende på
+første semester, som aldrig har programmeret før.
 ```
 
-The AI can now infer that:
+AI-modellen kan nu udlede, at:
 
-- the learner is a beginner,
-- the learner studies IT,
-- advanced terminology should be limited,
-- the explanation should be easy to follow,
-- and examples should be beginner-friendly.
+- den lærende er begynder,
+- den lærende studerer IT,
+- avanceret terminologi bør begrænses,
+- forklaringen skal være let at følge,
+- og eksemplerne skal være begyndervenlige.
 
-Compare:
+Sammenlign:
 
 ```text
-Explain Python variables.
+Forklar Python-variabler.
 ```
 
-with:
+med:
 
 ```text
-Explain Python variables to a first-semester
-IT student who has never programmed before.
+Forklar Python-variabler til en IT-studerende på
+første semester, som aldrig har programmeret før.
 ```
 
-The second prompt gives far more useful teaching context.
+Den anden prompt giver en langt mere brugbar undervisningskontekst.
 
 ---
 
-# 📋 10. Requirements
+# 📋 10. Krav
 
-**Requirements** tell the AI what the answer should contain.
-
-Example:
+**Krav** fortæller AI-modellen, hvad svaret skal indeholde.
 
 ```text
-Requirements:
+Krav:
 
-- Use simple language.
-- Start with a definition.
-- Give one real-world analogy.
-- Provide one executable Python example.
-- Explain the code.
-- Give two exercises.
+- Brug et enkelt sprog.
+- Begynd med en definition.
+- Giv én analogi fra virkeligheden.
+- Vis ét Python-eksempel, der kan køres.
+- Forklar koden.
+- Giv to øvelser.
 ```
 
-Requirements can control:
+Krav kan styre:
 
-- length,
-- number of examples,
-- level of detail,
-- formatting,
-- diagrams,
-- code,
-- exercises,
-- tables,
+- længde,
+- antal eksempler,
+- detaljeringsgrad,
+- formatering,
+- diagrammer,
+- kode,
+- øvelser,
+- tabeller,
 - tone,
-- language.
+- sprog.
 
-### Another example
+Et andet eksempel:
 
 ```text
-Requirements:
+Krav:
 
-- Explain the topic in less than 500 words.
-- Use a comparison table.
-- Include one Python example.
-- Finish with three review questions.
+- Forklar emnet med højst 500 ord.
+- Brug en sammenligningstabel.
+- Medtag ét Python-eksempel.
+- Afslut med tre repetitionsspørgsmål.
 ```
 
 ---
 
-# 🚧 11. Constraints
+# 🚧 11. Begrænsninger
 
-A **constraint** tells the AI what it should not do, or sets a boundary.
-
-Example:
+En **begrænsning** fortæller AI-modellen, hvad den ikke må gøre, eller fastsætter en grænse.
 
 ```text
-Do not provide solutions.
+Giv ikke løsningerne.
 ```
 
-Other examples:
+Andre eksempler:
 
 ```text
-Do not use advanced Python concepts.
-```
-
-```text
-Keep the explanation under 500 words.
+Brug ikke avancerede Python-koncepter.
 ```
 
 ```text
-Do not use external Python libraries.
+Hold forklaringen under 500 ord.
 ```
 
 ```text
-Do not use mathematical formulas.
+Brug ikke eksterne Python-biblioteker.
 ```
 
-Constraints are particularly useful in education because teachers may want students to solve a problem independently.
+```text
+Brug ikke matematiske formler.
+```
+
+Begrænsninger er særligt nyttige i undervisning, hvor de studerende selv skal løse en opgave.
 
 ---
 
-# ⚙️ 12. How a Prompt Works
+# ⚙️ 12. Hvordan virker en prompt?
 
-At a simple conceptual level:
+På et enkelt, konceptuelt niveau:
 
 ```mermaid
 flowchart LR
-    U["👤 User"]
-    P["💬 Prompt"]
-    M["🤖 AI Model"]
-    R["📄 Response"]
-
-    U -->|"writes"| P
-    P -->|"provides instructions"| M
-    M -->|"generates"| R
-
-    style U fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style P fill:#dcfce7,stroke:#16a34a,stroke-width:2px
-    style M fill:#ede9fe,stroke:#7c3aed,stroke-width:2px
-    style R fill:#fef3c7,stroke:#d97706,stroke-width:2px
+    U["👤 Bruger"] -->|"skriver"| P["💬 Prompt"]
+    P -->|"giver instruktioner"| M["🤖 AI-model"]
+    M -->|"genererer"| R["📄 Svar"]
 ```
 
-A clearer prompt usually gives the AI more useful information to work with.
+En tydeligere prompt giver normalt AI-modellen mere brugbar information at arbejde med.
 
-### Vague prompt
+### Uklar prompt
 
 ```mermaid
 flowchart LR
-    A["❓ Vague Prompt"] --> B["Little Context"]
-    B --> C["More AI Assumptions"]
-    C --> D["General Response"]
-
-    style A fill:#fee2e2,stroke:#dc2626
-    style B fill:#ffedd5,stroke:#ea580c
-    style C fill:#fef3c7,stroke:#d97706
-    style D fill:#f3f4f6,stroke:#6b7280
+    A["❓ Uklar prompt"] --> B["Lidt kontekst"]
+    B --> C["Flere AI-antagelser"]
+    C --> D["Generelt svar"]
 ```
 
-### Structured prompt
+### Struktureret prompt
 
 ```mermaid
 flowchart LR
-    A["✅ Structured Prompt"] --> B["Clear Instructions"]
-    B --> C["Better Context"]
-    C --> D["Fewer Assumptions"]
-    D --> E["More Relevant Response"]
-
-    style A fill:#dcfce7,stroke:#16a34a
-    style B fill:#dbeafe,stroke:#2563eb
-    style C fill:#ede9fe,stroke:#7c3aed
-    style D fill:#fef3c7,stroke:#d97706
-    style E fill:#fce7f3,stroke:#db2777
+    A["✅ Struktureret prompt"] --> B["Tydelige instruktioner"]
+    B --> C["Bedre kontekst"]
+    C --> D["Færre antagelser"]
+    D --> E["Mere relevant svar"]
 ```
 
 ---
 
-# 🧮 13. Prompt Engineering Formula
+# 🧮 13. Formel til prompt engineering
 
-A simple beginner formula is:
+En enkel begyndermodel er:
 
 ```text
-GOOD PROMPT
+GOD PROMPT
 =
-ROLE
+ROLLE
 +
-TASK
+OPGAVE
 +
-CONTEXT / AUDIENCE
+KONTEKST / MÅLGRUPPE
 +
-REQUIREMENTS
+KRAV
 +
-CONSTRAINTS
+BEGRÆNSNINGER
 ```
 
-Another useful version is:
+En anden nyttig version er:
 
 ```text
-ROLE + TASK + CONTEXT + FORMAT + CONSTRAINTS
+ROLLE + OPGAVE + KONTEKST + FORMAT + BEGRÆNSNINGER
 ```
 
-### Quick checklist
+### Hurtig tjekliste
 
-Before sending a prompt, ask:
+Spørg før du sender prompten:
 
-- 🎭 **Who** should the AI act as?
-- 🎯 **What** should it do?
-- 👥 **Who** is the answer for?
-- 📋 **What** should be included?
-- 🧱 **How** should the answer be presented?
-- 🚧 **What** should be avoided?
+- 🎭 **Hvem** skal AI-modellen være?
+- 🎯 **Hvad** skal den gøre?
+- 👥 **Hvem** er svaret til?
+- 📋 **Hvad** skal medtages?
+- 🧱 **Hvordan** skal svaret præsenteres?
+- 🚧 **Hvad** skal undgås?
 
 ---
 
-# 🐍 14. Example: Python Loops
+# 🐍 14. Eksempel: Python-løkker
 
-## Weak Prompt
-
-```text
-Explain loops.
-```
-
-This prompt gives almost no information about the learner or the expected response.
-
-## Improved Prompt
+## Svag prompt
 
 ```text
-You are an experienced Python teacher.
-
-Explain Python for-loops to a first-semester
-IT student who has never programmed before.
-
-Requirements:
-
-- Use simple language.
-- Start with a definition.
-- Give one real-world analogy.
-- Provide two executable Python examples.
-- Explain each example step by step.
-- Give two exercises.
-- Do not provide the solutions.
+Forklar løkker.
 ```
 
-### What improved?
+Prompten giver næsten ingen information om den lærende eller det forventede svar.
 
-| Element | Added information |
+## Forbedret prompt
+
+```text
+Du er en erfaren Python-underviser.
+
+Forklar for-løkker i Python til en IT-studerende
+på første semester, som aldrig har programmeret før.
+
+Krav:
+
+- Brug et enkelt sprog.
+- Begynd med en definition.
+- Giv én analogi fra virkeligheden.
+- Vis to Python-eksempler, der kan køres.
+- Forklar hvert eksempel trin for trin.
+- Giv to øvelser.
+- Giv ikke løsningerne.
+```
+
+### Hvad blev forbedret?
+
+| Element | Tilføjet information |
 |---|---|
-| 🎭 Role | Experienced Python teacher |
-| 🎯 Task | Explain Python `for` loops |
-| 👥 Audience | First-semester beginner |
-| 📋 Requirements | Definition, analogy, examples, exercises |
-| 🚧 Constraint | No solutions |
+| 🎭 Rolle | Erfaren Python-underviser |
+| 🎯 Opgave | Forklar `for`-løkker i Python |
+| 👥 Målgruppe | Begynder på første semester |
+| 📋 Krav | Definition, analogi, eksempler og øvelser |
+| 🚧 Begrænsning | Ingen løsninger |
 
 ---
 
-# 🤖 15. Example: Artificial Intelligence
+# 🤖 15. Eksempel: Kunstig intelligens
 
-## Simple Prompt
-
-```text
-Explain AI.
-```
-
-## Structured Prompt
+## Enkel prompt
 
 ```text
-You are an AI instructor.
-
-Explain Artificial Intelligence to first-semester
-IT students with no previous AI experience.
-
-Requirements:
-
-- Use simple language.
-- Define Artificial Intelligence.
-- Give three real-world examples.
-- Explain the difference between AI and traditional software.
-- Use a simple text diagram.
-- Give three discussion questions.
-- Keep the explanation beginner-friendly.
+Forklar AI.
 ```
 
-The structured prompt gives the AI a clear audience, learning goal, and output structure.
+## Struktureret prompt
+
+```text
+Du er underviser i kunstig intelligens.
+
+Forklar kunstig intelligens til IT-studerende på
+første semester uden tidligere erfaring med AI.
+
+Krav:
+
+- Brug et enkelt sprog.
+- Definér kunstig intelligens.
+- Giv tre eksempler fra virkeligheden.
+- Forklar forskellen på AI og traditionel software.
+- Brug et enkelt tekstdiagram.
+- Giv tre diskussionsspørgsmål.
+- Hold forklaringen begyndervenlig.
+```
+
+Den strukturerede prompt giver AI-modellen en tydelig målgruppe, et læringsmål og en svarstruktur.
 
 ---
 
-# 🛡️ 16. Example: Cybersecurity
+# 🛡️ 16. Eksempel: Cybersikkerhed
 
-## Simple Prompt
-
-```text
-Explain phishing.
-```
-
-## Better Prompt
+## Enkel prompt
 
 ```text
-You are a cybersecurity instructor.
-
-Explain phishing attacks to first-semester
-IT students.
-
-Requirements:
-
-- Use beginner-friendly language.
-- Start with a definition.
-- Give one realistic example.
-- Explain how a phishing attack works step by step.
-- List five warning signs.
-- Give three classroom discussion questions.
-- Do not include instructions for performing an attack.
+Forklar phishing.
 ```
 
-This prompt clearly defines both the educational goal and the safety boundary.
+## Bedre prompt
+
+```text
+Du er underviser i cybersikkerhed.
+
+Forklar phishingangreb til IT-studerende på første semester.
+
+Krav:
+
+- Brug et begyndervenligt sprog.
+- Begynd med en definition.
+- Giv ét realistisk eksempel.
+- Forklar trin for trin, hvordan et phishingangreb virker.
+- Angiv fem advarselstegn.
+- Giv tre diskussionsspørgsmål til undervisningen.
+- Medtag ikke instruktioner til at udføre et angreb.
+```
+
+Prompten definerer tydeligt både læringsmålet og sikkerhedsgrænsen.
 
 ---
 
-# 📏 17. Longer Is Not Always Better
+# 📏 17. Længere er ikke altid bedre
 
-Prompt Engineering does **not** mean writing the longest possible prompt.
+Prompt engineering betyder **ikke**, at man skal skrive den længst mulige prompt. En lang prompt kan stadig være uklar.
 
-A long prompt can still be unclear.
+Målet er, at prompten skal være:
 
-The goal is to make the prompt:
-
-- ✅ Clear
-- ✅ Specific
+- ✅ Tydelig
+- ✅ Specifik
 - ✅ Relevant
-- ✅ Structured
-- ✅ Easy to understand
+- ✅ Struktureret
+- ✅ Let at forstå
 
-For example:
+Eksempel:
 
 ```text
-Explain Python variables to a beginner.
-
-Use simple language and provide one code example.
+Forklar Python-variabler til en begynder.
+Brug et enkelt sprog, og vis ét kodeeksempel.
 ```
 
-This short prompt is already better than:
+Denne korte prompt er allerede bedre end:
 
 ```text
-Explain variables.
+Forklar variabler.
 ```
 
 > [!WARNING]
-> More words do not automatically mean a better prompt.  
-> **Useful information matters more than unnecessary detail.**
+> Flere ord giver ikke automatisk en bedre prompt.  
+> **Nyttig information er vigtigere end unødvendige detaljer.**
 
 ---
 
-# 👨‍🏫 18. Prompt Engineering for Teachers
+# 👨‍🏫 18. Prompt engineering for undervisere
 
-Prompt Engineering is especially useful for educators.
+Prompt engineering er særligt nyttigt for undervisere. En underviser kan styre:
 
-A teacher can control:
+- 🎓 Fagligt niveau
+- 🗣️ Sproglig sværhedsgrad
+- 💻 Antal kodeeksempler
+- 🧪 Øvelsestype
+- ✅ Om løsninger skal medtages
+- 📏 Svarets længde
+- 📊 Tabeller og diagrammer
+- 🧠 Repetitionsspørgsmål
+- 📝 Opgavens struktur
 
-- 🎓 Learning level
-- 🗣️ Language difficulty
-- 💻 Number of code examples
-- 🧪 Type of exercises
-- ✅ Whether solutions are included
-- 📏 Response length
-- 📊 Tables and diagrams
-- 🧠 Review questions
-- 📝 Assignment structure
-
-### Example: Generate a classroom exercise
+### Eksempel: Generér en undervisningsøvelse
 
 ```text
-You are a Python teacher.
+Du er Python-underviser.
 
-Create a beginner exercise about Python variables
-for first-semester IT students.
+Lav en begynderøvelse om Python-variabler
+til IT-studerende på første semester.
 
-The exercise should take approximately 20 minutes.
+Øvelsen skal tage cirka 20 minutter.
 
-Include:
+Medtag:
 
-- A short scenario
-- Five requirements
-- Expected output format
+- Et kort scenarie
+- Fem krav
+- Det forventede outputformat
 
-Do not include Python code.
-Do not provide the solution.
+Medtag ikke Python-kode.
+Giv ikke løsningen.
 ```
 
-This gives the teacher greater control over the learning material.
+Det giver underviseren større kontrol over undervisningsmaterialet.
 
 ---
 
-# 🔁 19. Iterative Prompt Improvement
+# 🔁 19. Iterativ forbedring af prompts
 
-A prompt does not always need to be perfect on the first attempt.
-
-Prompt Engineering can be an **iterative process**.
+En prompt behøver ikke være perfekt i første forsøg. Prompt engineering kan være en **iterativ proces**.
 
 ```mermaid
 flowchart LR
-    A["✍️ Write Prompt"]
-    B["🤖 Get AI Response"]
-    C["🔍 Evaluate"]
-    D["🛠️ Improve Prompt"]
-    E["✨ Better Response"]
-
-    A --> B --> C --> D --> B
-    C -->|"Good enough"| E
-
-    style A fill:#dbeafe,stroke:#2563eb,stroke-width:2px
-    style B fill:#ede9fe,stroke:#7c3aed,stroke-width:2px
-    style C fill:#fef3c7,stroke:#d97706,stroke-width:2px
-    style D fill:#ffedd5,stroke:#ea580c,stroke-width:2px
-    style E fill:#dcfce7,stroke:#16a34a,stroke-width:2px
+    A["✍️ Skriv prompt"] --> B["🤖 Modtag AI-svar"]
+    B --> C["🔍 Evaluér"]
+    C --> D["🛠️ Forbedr prompt"]
+    D --> B
+    C -->|"Godt nok"| E["✨ Bedre svar"]
 ```
 
-If the answer is too advanced, refine the prompt:
+Hvis svaret er for avanceret:
 
 ```text
-Use simpler language suitable for a complete beginner.
+Brug et enklere sprog, der passer til en helt ny begynder.
 ```
 
-If the answer is too long:
+Hvis svaret er for langt:
 
 ```text
-Keep the explanation under 300 words.
+Hold forklaringen under 300 ord.
 ```
 
-If more practical examples are needed:
+Hvis der mangler praktiske eksempler:
 
 ```text
-Provide three real-world examples from IT.
+Giv tre eksempler fra den virkelige IT-verden.
 ```
 
-If the answer needs a specific structure:
+Hvis svaret kræver en bestemt struktur:
 
 ```text
-Present the answer using headings, a table, and a short summary.
+Præsenter svaret med overskrifter, en tabel og en kort opsummering.
 ```
 
-The cycle can be repeated until the response is suitable for the task.
+Cyklussen kan gentages, indtil svaret passer til opgaven.
 
 ---
 
-# 🧰 20. Reusable Prompt Template
+# 🧰 20. Genanvendelig promptskabelon
 
-Students can use this template when creating prompts:
+De studerende kan bruge denne skabelon:
 
 ```text
-ROLE:
-You are a/an [role].
+ROLLE:
+Du er [rolle].
 
-TASK:
-[Explain clearly what the AI should do.]
+OPGAVE:
+[Beskriv tydeligt, hvad AI-modellen skal gøre.]
 
-AUDIENCE / CONTEXT:
-The response is for [target audience].
-They have [background / experience level].
+MÅLGRUPPE / KONTEKST:
+Svaret er til [målgruppe].
+De har [baggrund / erfaringsniveau].
 
-REQUIREMENTS:
-- [Requirement 1]
-- [Requirement 2]
-- [Requirement 3]
-- [Requirement 4]
+KRAV:
+- [Krav 1]
+- [Krav 2]
+- [Krav 3]
+- [Krav 4]
 
 FORMAT:
-Present the response as [article / table / bullet list / tutorial / code].
+Præsenter svaret som [artikel / tabel / punktliste / vejledning / kode].
 
-CONSTRAINTS:
-- Do not [restriction 1].
-- Avoid [restriction 2].
+BEGRÆNSNINGER:
+- Du må ikke [begrænsning 1].
+- Undgå [begrænsning 2].
 ```
 
-### Example
+### Eksempel
 
 ```text
-ROLE:
-You are an experienced networking teacher.
+ROLLE:
+Du er en erfaren netværksunderviser.
 
-TASK:
-Explain the difference between 2.4 GHz and 5 GHz Wi-Fi.
+OPGAVE:
+Forklar forskellen på 2,4 GHz og 5 GHz Wi-Fi.
 
-AUDIENCE / CONTEXT:
-The response is for first-semester IT students
-with basic computer knowledge.
+MÅLGRUPPE / KONTEKST:
+Svaret er til IT-studerende på første semester
+med grundlæggende computerkendskab.
 
-REQUIREMENTS:
-- Use simple language.
-- Explain speed, range, and interference.
-- Provide one comparison table.
-- Give two real-world examples.
+KRAV:
+- Brug et enkelt sprog.
+- Forklar hastighed, rækkevidde og interferens.
+- Medtag én sammenligningstabel.
+- Giv to eksempler fra virkeligheden.
 
 FORMAT:
-Use headings and a comparison table.
+Brug overskrifter og en sammenligningstabel.
 
-CONSTRAINTS:
-- Do not use advanced radio-frequency mathematics.
+BEGRÆNSNINGER:
+- Brug ikke avanceret radiofrekvensmatematik.
 ```
 
 ---
 
-# 🧪 21. Student Activities
+# 🧪 21. Studenteraktiviteter
 
-## Exercise 1 — Improve a Weak Prompt
+## Øvelse 1 — Forbedr en svag prompt
 
-Consider:
+Overvej:
 
 ```text
-Explain databases.
+Forklar databaser.
 ```
 
-Rewrite the prompt so that it contains:
+Omskriv prompten, så den indeholder:
 
-- 🎭 A role
-- 🎯 A clear task
-- 👥 A target audience
-- 📋 At least four requirements
-- 🚧 At least one constraint
+- 🎭 En rolle
+- 🎯 En tydelig opgave
+- 👥 En målgruppe
+- 📋 Mindst fire krav
+- 🚧 Mindst én begrænsning
 
-**Do not generate the answer yet.**  
-First concentrate on improving the prompt itself.
+**Generér ikke svaret endnu.**  
+Koncentrér dig først om at forbedre selve prompten.
 
 ---
 
-## Exercise 2 — Create Your Own Prompt
+## Øvelse 2 — Lav din egen prompt
 
-Choose one topic:
+Vælg ét emne:
 
-- 🐍 Python functions
-- 🌐 Computer networks
-- 🛡️ Cybersecurity
-- 🤖 Artificial Intelligence
-- 🗄️ Databases
+- 🐍 Python-funktioner
+- 🌐 Computernetværk
+- 🛡️ Cybersikkerhed
+- 🤖 Kunstig intelligens
+- 🗄️ Databaser
 - ☁️ Cloud computing
 - 📡 Internet of Things
-- 🤖 Robotics
+- 🤖 Robotter
 
-Create a structured prompt using:
+Lav en struktureret prompt med:
 
 ```text
-Role:
-Task:
-Audience:
-Requirements:
+Rolle:
+Opgave:
+Målgruppe:
+Krav:
 Format:
-Constraints:
+Begrænsninger:
 ```
 
-Then test your prompt with an AI model and evaluate the response.
+Test derefter prompten med en AI-model, og evaluér svaret.
 
 ---
 
-## Exercise 3 — Compare Two Prompts
+## Øvelse 3 — Sammenlign to prompts
 
 ### Prompt A
 
 ```text
-Explain machine learning.
+Forklar maskinlæring.
 ```
 
 ### Prompt B
 
 ```text
-You are an experienced machine-learning teacher.
+Du er en erfaren underviser i maskinlæring.
 
-Explain machine learning to a first-semester
-IT student with no previous AI experience.
+Forklar maskinlæring til en IT-studerende på
+første semester uden tidligere erfaring med AI.
 
-Use simple language.
+Brug et enkelt sprog.
 
-Include:
+Medtag:
 
-- A definition
-- One real-world analogy
-- Three real-world examples
-- A simple diagram
-- Two discussion questions
+- En definition
+- Én analogi fra virkeligheden
+- Tre eksempler fra virkeligheden
+- Et enkelt diagram
+- To diskussionsspørgsmål
 
-Do not use mathematical formulas.
+Brug ikke matematiske formler.
 ```
 
-### Discussion
+### Diskussion
 
-Which prompt is better for a first-semester IT student?
+Hvilken prompt er bedst til en IT-studerende på første semester?
 
-Consider:
+Overvej:
 
-- audience,
-- context,
-- requirements,
-- structure,
-- constraints,
-- and expected quality of the response.
+- målgruppe,
+- kontekst,
+- krav,
+- struktur,
+- begrænsninger,
+- og den forventede kvalitet af svaret.
 
 ---
 
-# 📝 22. Summary
+# 📝 22. Opsummering
 
-Prompt Engineering is the skill of designing instructions that help an AI model understand what we need.
+Prompt engineering er evnen til at udforme instruktioner, der hjælper en AI-model med at forstå vores behov.
 
-A useful beginner model is:
+En nyttig begyndermodel er:
 
 ```mermaid
 flowchart TB
-    A["🎭 ROLE"]
-    B["🎯 TASK"]
-    C["👥 CONTEXT / AUDIENCE"]
-    D["📋 REQUIREMENTS"]
-    E["🚧 CONSTRAINTS"]
-    F["💎 CLEARER PROMPT"]
-    G["🤖 MORE USEFUL AI RESPONSE"]
-
-    A --> F
-    B --> F
-    C --> F
-    D --> F
-    E --> F
-    F --> G
-
-    style A fill:#3b82f6,color:#ffffff
-    style B fill:#22c55e,color:#ffffff
-    style C fill:#f59e0b,color:#111827
-    style D fill:#8b5cf6,color:#ffffff
-    style E fill:#f97316,color:#ffffff
-    style F fill:#ec4899,color:#ffffff
-    style G fill:#14b8a6,color:#ffffff
+    A["🎭 ROLLE"] --> F["💎 TYDELIGERE PROMPT"]
+    B["🎯 OPGAVE"] --> F
+    C["👥 KONTEKST / MÅLGRUPPE"] --> F
+    D["📋 KRAV"] --> F
+    E["🚧 BEGRÆNSNINGER"] --> F
+    F --> G["🤖 MERE BRUGBART AI-SVAR"]
 ```
 
-A structured prompt gives the AI:
+En struktureret prompt giver AI-modellen:
 
-- clearer instructions,
-- better context,
-- fewer areas to guess,
-- and a more specific target.
+- tydeligere instruktioner,
+- bedre kontekst,
+- færre områder, hvor den skal gætte,
+- og et mere specifikt mål.
 
 ---
 
-# ⭐ 23. Key Takeaway
+# ⭐ 23. Vigtigste pointe
 
 > [!IMPORTANT]
-> ## Better Prompt → Better Direction → More Useful Response
+> ## Bedre prompt → Tydeligere retning → Mere brugbart svar
 >
-> Before sending a prompt, think about:
+> Tænk over følgende, før du sender en prompt:
 >
-> **Role + Task + Audience + Requirements + Constraints**
+> **Rolle + Opgave + Målgruppe + Krav + Begrænsninger**
 
 ```text
-Who should the AI be?
+Hvem skal AI-modellen være?
         ↓
-What should it do?
+Hvad skal den gøre?
         ↓
-Who is the answer for?
+Hvem er svaret til?
         ↓
-What should be included?
+Hvad skal medtages?
         ↓
-How should it be presented?
+Hvordan skal det præsenteres?
         ↓
-What should be avoided?
+Hvad skal undgås?
         ↓
-Send the Prompt
+Send prompten
 ```
 
-Prompt Engineering is not simply the skill of asking AI questions.
+Prompt engineering er ikke blot evnen til at stille AI spørgsmål.
 
-It is the skill of **communicating requirements clearly**.
+Det er evnen til at **kommunikere krav tydeligt**.
 
 ---
 
-### 🚀 Practice → Evaluate → Improve → Repeat
+### 🚀 Øv → Evaluér → Forbedr → Gentag
 
-**Clear prompts help humans communicate more effectively with AI.**
+**Tydelige prompts hjælper mennesker med at kommunikere mere effektivt med AI.**

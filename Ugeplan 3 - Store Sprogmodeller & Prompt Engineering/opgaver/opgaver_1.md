@@ -203,7 +203,7 @@ Exercise
 
 # 📊 Compare the Outputs
 
-Run both prompts in the same AI model.
+Run both prompts in the same AI model or another model forexample you have infront ** Chatgtp , Claude , Google Gemini or others **.
 
 Students should compare the responses based on:
 
